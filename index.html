@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServidorDeJunior</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="playAudio">Click</button>
+
+    <audio id="backgroundMusic" loop>
+        <source src="Cancion.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div class="container">
+        <h1 class="main-title">Servidor De Junior</h1> <!-- Este es el titulo -->
+        
+        <div class="profile-container">
+            <img src="perfil.jpg" alt="Imagen de perfil" class="profile-img">
+        </div>
+
+        <div class="buttons-container"> <!-- aqui van los links muchacho -->
+            <a href="https://discord.gg/NzkFRMDBDG" class="button" target="_blank">Discord</a>
+            <a href="https://roblox.ls/create/Caos_primordial/generator" class="button" target="_blank">Generador Roblox.ls</a>
+            <a href="https://is.gd/lMO9Hc" class="button" target="_blank">Generator Roblox.com.py</a>
+            <a href="https://roblqox.com/generator/Caos_primordial/auth" class="button" target="_blank">MultiGenerador (Recomendable)</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 junior17577. Solo porque no me gusta matar, no significa que no lo disfrute.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('playAudio').addEventListener('click', function () {
+            const audio = document.getElementById('backgroundMusic');
+            audio.volume = 0.2; // Ajusta el volumen aquí (20%)
+            audio.play();
+            this.style.opacity = '0';
+            setTimeout(() => {
+                this.style.display = 'none';
+            }, 300);
+        });
+      </script>
+</body>
+</html>
